@@ -1,11 +1,11 @@
-# Gender-Detection-and-Classification   <img alt="GitHub" src="https://github.com/khushi924/Gender-Detection-and-Classification">
+# Gender-and-Age-Detection   <img alt="GitHub" src="https://img.shields.io/github/license/smahesh29/Gender-and-Age-Detection">
 
 
 <h2>Objective :</h2>
-<p>To build a gender detector that can approximately guess the gender of the person (face) in a picture or through webcam.</p>
+<p>To build a gender and age detector that can approximately guess the gender and age of the person (face) in a picture or through webcam.</p>
 
 <h2>About the Project :</h2>
-<p>In this Python Project, I had used Deep Learning to accurately identify the gender of a person from a single image of a face. I used the models trained by <a href="https://talhassner.github.io/home/projects/Adience/Adience-data.html">Tal Hassner and Gil Levi</a>. The predicted gender may be one of ‘Male’ and ‘Female’. It is very difficult to accurately guess an exact age from a single image because of factors like makeup, lighting, obstructions, and facial expressions. And so, I made this a classification problem instead of making it one of regression.</p>
+<p>In this Python Project, I had used Deep Learning to accurately identify the gender and age of a person from a single image of a face. I used the models trained by <a href="https://talhassner.github.io/home/projects/Adience/Adience-data.html">Tal Hassner and Gil Levi</a>. The predicted gender may be one of ‘Male’ and ‘Female’, and the predicted age may be one of the following ranges- (0 – 2), (4 – 6), (8 – 12), (15 – 20), (25 – 32), (38 – 43), (48 – 53), (60 – 100) (8 nodes in the final softmax layer). It is very difficult to accurately guess an exact age from a single image because of factors like makeup, lighting, obstructions, and facial expressions. And so, I made this a classification problem instead of making it one of regression.</p>
 
 <h2>Dataset :</h2>
 <p>For this python project, I had used the Adience dataset; the dataset is available in the public domain and you can find it <a href="https://www.kaggle.com/ttungl/adience-benchmark-gender-and-age-classification">here</a>. This dataset serves as a benchmark for face photos and is inclusive of various real-world imaging conditions like noise, lighting, pose, and appearance. The images have been collected from Flickr albums and distributed under the Creative Commons (CC) license. It has a total of 26,580 photos of 2,284 subjects in eight age ranges (as mentioned above) and is about 1GB in size. The models I used had been trained on this dataset.</p>
@@ -45,7 +45,7 @@
 </ul>
   <p><b>Note: </b>The Image should be present in same folder where all the files are present</p> 
 <ul>
-  <li><b>Detecting Gender of face through webcam</b> Use Command :</li>
+  <li><b>Detecting Gender and Age of face through webcam</b> Use Command :</li>
   
       python detect.py
 </ul>
@@ -56,13 +56,48 @@
 # Working:
 [![Watch the video](https://img.youtube.com/vi/ReeccRD21EU/0.jpg)](https://youtu.be/ReeccRD21EU)
 
+<h2>Examples :</h2>
+<p><b>NOTE:- I downloaded the images from Google,if you have any query or problem i can remove them, i just used it for Educational purpose.</b></p>
 
-# Future work:
+    >python detect.py --image girl1.jpg
+    Gender: Female
+    Age: 25-32 years
+    
+<img src="Example/Detecting age and gender girl1.png">
 
-- Improve accuracy: Explore other deep learning architectures and techniques to improve accuracy.
-- Expand dataset: Collect and incorporate more diverse facial images to enhance the system's robustness.
+    >python detect.py --image girl2.jpg
+    Gender: Female
+    Age: 8-12 years
+    
+<img src="Example/Detecting age and gender girl2.png">
 
+    >python detect.py --image kid1.jpg
+    Gender: Male
+    Age: 4-6 years    
+    
+<img src="Example/Detecting age and gender kid1.png">
 
-# Performance
+    >python detect.py --image kid2.jpg
+    Gender: Female
+    Age: 4-6 years  
+    
+<img src="Example/Detecting age and gender kid2.png">
 
-The system achieves high accuracy in gender classification, with an accuracy rate of 98% on the testing set.
+    >python detect.py --image man1.jpg
+    Gender: Male
+    Age: 38-43 years
+    
+<img src="Example/Detecting age and gender man1.png">
+
+    >python detect.py --image man2.jpg
+    Gender: Male
+    Age: 25-32 years
+    
+<img src="Example/Detecting age and gender man2.png">
+
+    >python detect.py --image woman1.jpg
+    Gender: Female
+    Age: 38-43 years
+    
+<img src="Example/Detecting age and gender woman1.png">
+              
